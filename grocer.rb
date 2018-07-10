@@ -5,14 +5,14 @@ def consolidate_cart(cart)
   cart.each do |hash|
     hash.each do |key, value_hash|
       consolidated_cart[key] = value_hash
-      # consolidated_cart[key][:count] = cart.count(hash)
+      consolidated_cart[key][:count] = cart.count(hash)
     end
   end
-  consolidated_cart.each do |key, value_hash|
-      # binding.pry
-
-    consolidated_cart[key][:count] = cart.count({key => value_hash})
-  end
+  # consolidated_cart.each do |key, value_hash|
+  #     # binding.pry
+  #
+  #   consolidated_cart[key][:count] = cart.count({key => value_hash})
+  # end
 
   # binding.pry
   consolidated_cart
