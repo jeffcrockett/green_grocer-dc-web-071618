@@ -9,7 +9,7 @@ def consolidate_cart(cart)
     end
   end
   consolidated_cart.each do |key, value_hash|
-      binding.pry
+      # binding.pry
 
     consolidated_cart[key][:count] = cart.count({key => value_hash})
   end
