@@ -35,7 +35,7 @@ end
 
 def apply_clearance(cart)
   cart.each do |key, value_hash|
-    if value_hash[clearance]
+    if value_hash[:clearance]
       value_hash[:price]  = (value_hash[:price]*80).floor/100
     end
   end
