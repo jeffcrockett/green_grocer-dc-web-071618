@@ -5,7 +5,7 @@ def consolidate_cart(cart)
   cart.each do |hash|
     hash.each do |key, value_hash|
       consolidated_cart[key] = value_hash
-      consolidated_cart[key][:count] = cart.count(hash)
+      value_hash[:count] = cart.count(hash)
     end
   end
   # consolidated_cart.each do |key, value_hash|
