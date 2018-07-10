@@ -14,7 +14,7 @@ def consolidate_cart(cart)
     value_hash[:count] = cart.count({key => value_hash})
   end
 
-  binding.pry
+  # binding.pry
   consolidated_cart
 end
 
