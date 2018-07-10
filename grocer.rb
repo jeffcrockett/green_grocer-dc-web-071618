@@ -20,7 +20,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  consolidated_cart = consolidate_cart(cart)
+  # consolidated_cart = consolidate_cart(cart)
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
       cart["#{coupon[:item]} W/COUPON"] = {
