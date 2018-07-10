@@ -1,4 +1,4 @@
-8describe "Grocer" do
+describe "Grocer" do
   let(:items) do
     [
       {"AVOCADO" => {:price => 3.00, :clearance => true}},
