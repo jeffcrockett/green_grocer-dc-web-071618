@@ -22,11 +22,11 @@ def apply_coupons(cart, coupons)
   # code here
   consolidated_cart = consolidate_cart(cart)
   coupons.each do |coupon|
-    if consolidated_cart.keys.include?(coupon[:item])
-      consolidated_cart["#{coupon[:item]} W/COUPON"] = {
-        :price => coupon[:cost], :clearance => consolidated_cart[coupon[:item]][:clearance], :count => coupons.count(coupon)
+    if cart.keys.include?(coupon[:item])
+      cart["#{coupon[:item]} W/COUPON"] = {
+        :price => coupon[:cost], :clearance => cart[coupon[:item]][:clearance], :count => coupons.count(coupon)
       }
-      consolidated_cart[coupon[:item]][:count] -= coupon[:num]
+      cart[coupon[:item]][:count] -= coupon[:num]
     end
   end
 end
